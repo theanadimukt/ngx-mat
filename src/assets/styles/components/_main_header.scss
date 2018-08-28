@@ -1,0 +1,11 @@
+mat-toolbar {
+    &.main-header {
+        padding: 0 8px;
+        position: relative;
+        box-shadow: 0 1px 8px rgba(0,0,0,.3);
+        z-index: 1;
+        .header-title {
+            padding: 0 10px !important;
+        }
+    }
+}

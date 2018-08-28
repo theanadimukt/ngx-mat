@@ -1,0 +1,37 @@
+<div class="app" dir="ltr">
+  <mat-toolbar color="primary" class="main-header">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidemenu.toggle()"><mat-icon>menu</mat-icon></button>
+      <span class="header-title">ngx.</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" [matMenuTriggerFor]="menu">account_circle</mat-icon>
+      <mat-menu #menu="matMenu">
+        <a href="" mat-menu-item><mat-icon>account_box</mat-icon> Profile</a>
+        <a href="" mat-menu-item><mat-icon>settings</mat-icon> Setting</a>
+        <a href="" mat-menu-item><mat-icon>power_settings_new</mat-icon> Logout</a>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="app-inner">
+    <!-- sidebar navigation -->
+    <mat-sidenav [mode]="isOver() ? 'over': 'side'" #sidemenu [opened]="!isOver()">
+      <mat-nav-list class="navigation">
+        <mat-list-item *ngFor="let menuitem of menuItems.getAll()">
+            <a matLine [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link'">
+              <mat-icon>{{ menuitem.icon }}</mat-icon>
+              <span class="pl-15 pr-15">{{ menuitem.name }}</span>
+              <span fxFlex></span>
+            </a>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!-- main content part -->
+    <mat-sidenav-content>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
