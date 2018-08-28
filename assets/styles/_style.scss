@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'base/variables';
+@import 'base/spacing';
+@import 'base/mixins';
+
+@import 'components/main_header';
+@import 'components/main_container';
+@import 'components/main_sidenav';
+
+body {
+    margin: $margin-zero;
+    padding: $padding-zero;
+}
