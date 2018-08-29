@@ -1,27 +1,44 @@
-# MaterialNg6
+# Ngx-Mat
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+### Demo
 
-## Development server
+https://sagarpatel9697.github.io/ngx-mat/dashboard
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Setting up environment
 
-## Code scaffolding
+#### Prerequisite
+Following things need to be installed in your machine.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* NodeJS
 
-## Build
+1- At very start you need to clone code repo with the following instructions:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
+$ git clone <git_repo_path_goes_here> <folder_name_here>
+$ cd <folder_name_here>
+```
 
-## Running unit tests
+2- Once repository cloned in your machine, lets install angular globally.
+```bash
+$ npm install -g @angular/cli
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3- After global things are installed, some local stuff also need to be installed here.
+```bash
+$ npm install
+```
 
-## Running end-to-end tests
+4- For development purpose you need to run project through terminals by using following:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```bash
+$ ng serve -o
+```
+It will serve project at http://localhost:4200
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Angular CLI + Material
+`angular-cli` is used for resource builder of frontend. You can find following links usefull.
+* [Repo](https://github.com/angular/angular-cli) & [Docs](https://github.com/angular/angular-cli/wiki)
+
+`material` is used for UI layout of frontend. You can find following links usefull.
+* [Repo](https://github.com/angular/material2) & [Docs](https://material.angular.io/)
