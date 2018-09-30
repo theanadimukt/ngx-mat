@@ -7,7 +7,9 @@ export const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      {path: 'dashboard', loadChildren: './component/home/home.module#HomeModule'}
+      {path: 'dashboard', loadChildren: './component/home/home.module#HomeModule'},
+      {path: 'profile', loadChildren: './component/profile/profile.module#ProfileModule'},
+      {path: 'setting', loadChildren: './component/setting/setting.module#SettingModule'},
     ]
   },
   { path: '**', redirectTo: 'dashboard' }

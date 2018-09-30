@@ -1,0 +1,71 @@
+<mat-horizontal-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="personalForm">
+    <form [formGroup]="personalForm">
+      <div fxLayout="row wrap">
+        <ng-template matStepLabel>Personal Information</ng-template>
+        <div fxFlex="50">
+          <mat-form-field style="width:90%">
+            <input matInput placeholder="Name" formControlName="name" required>
+          </mat-form-field>
+        </div>
+        <div fxFlex="50">
+          <mat-form-field style="width:90%">
+            <input matInput placeholder="Email" formControlName="email" required>
+          </mat-form-field>
+        </div>
+        <div fxFlex="50">
+          <mat-form-field style="width:90%">
+            <input matInput placeholder="Phone" formControlName="phone" >
+          </mat-form-field>
+        </div>
+        <div fxFlex="50">
+          <mat-form-field style="width:90%">
+            <input matInput placeholder="Designation" formControlName="designation" >
+          </mat-form-field>
+        </div>
+        <div fxFlex="50">
+          <mat-form-field style="width:90%">
+            <input matInput placeholder="Bio" formControlName="bio" >
+          </mat-form-field>
+        </div>
+        <div fxFlex="100">
+          <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="experienceForm">
+    <form [formGroup]="experienceForm">
+      <div fxLayout="row wrap">
+        <ng-template matStepLabel>Experiences</ng-template>
+        <div fxFlex="50">
+          <mat-form-field style="width:90%">
+            <input matInput placeholder="Company" formControlName="company" >
+          </mat-form-field>
+        </div>
+        <!-- <div fxFlex="50"></div> -->
+        <div fxFlex="100">
+          <button mat-raised-button matStepperPrevious class="mr-10">Back</button>
+          <button mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <form [formGroup]="addressForm">
+      <div fxLayout="row wrap">
+        <ng-template matStepLabel>Address Info</ng-template>
+        <div fxFlex="50">
+          <mat-form-field style="width:90%">
+            <input matInput placeholder="Address" formControlName="address" >
+          </mat-form-field>
+        </div>
+        <!-- <div fxFlex="50"></div> -->
+        <div fxFlex="100">
+          <button mat-raised-button matStepperPrevious class="mr-10">Back</button>
+          <button mat-raised-button color="primary" matStepperNext (click)="finishStepper()">Done</button>
+        </div>
+      </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>
